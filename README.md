@@ -25,6 +25,7 @@ const createPermission = 8;   // 1000
 const readPermission = 4;     // 0100
 const updatePermission = 2;   // 0010
 const deletePermission = 1;   // 0001
+```
 
 ## For testing
 run
