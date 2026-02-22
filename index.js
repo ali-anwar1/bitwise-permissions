@@ -1,13 +1,14 @@
-// Create, Read, Update and Delete files permissions
-// 00000100
-// 00000101
-// 00000110
-// 00000111
+/* Create, Read, Update and Delete files permissions */
+// Create: 00001000 (8)
+// Read:   00000100 (4)
+// Update: 00000010 (2)
+// Delete: 00000001 (1)
 
-const createPermission = 4;
-const readPermission = 2;
-const updatePermission = 1;
-const deletePermission = 0;
+
+const createPermission = 8;   // 1000
+const readPermission = 4;     // 0100
+const updatePermission = 2;   // 0010
+const deletePermission = 1;   // 0001
 
 function hasPermission(permission, permissionToCheck) {
     return (permission & permissionToCheck) === permissionToCheck;
@@ -31,7 +32,7 @@ function toBinary(permissions) {
 }
 
 for (const key in userPermissions) {
-    console.log(toBinary(userPermissions[key]), key, userPermissions[key]);
+    console.log(toBinary(userPermissions[key]), key, '=', userPermissions[key]);
 }
 
 
